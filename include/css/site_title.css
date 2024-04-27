@@ -1,0 +1,61 @@
+@import url(https://fonts.googleapis.com/css?family=Khula:700);
+body {
+  background: #111;
+}
+.hidden {
+  opacity:0;
+}
+
+.console-underscore {
+    display:inline-block;
+   position:relative;
+   left:1%;
+ }
+
+ /* SHIFT */
+.shift li a {
+    position:relative;
+    z-index: 1;
+  }
+  .shift li a:hover {
+    background-color: #111;
+    color:#111;
+  }
+  .shift li a:after {
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    width: 100%;
+    height: 1px;
+    content: '.';
+    color: transparent;
+    background: #111;
+    visibility: none;
+    opacity: 0;
+    z-index: -1;
+  }
+  .shift li a:hover:after {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+  }
+
+  .fa-watch{
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    transform-origin: bottom;
+  }
+
+  .bounce {
+    animation-name: bounce;
+    animation-timing-function: linear;
+}
+@keyframes bounce {
+    0%   { transform: translateY(0); }
+    50%  { transform: translateY(-10%); }
+    100% { transform: translateY(0); }
+}
